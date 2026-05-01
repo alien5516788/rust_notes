@@ -3,6 +3,7 @@ pub mod console_output_formatting;
 pub mod generics_as_infinite_types;
 pub mod interior_mutablity;
 pub mod literal_ownership;
+pub mod macro_expansion;
 pub mod polymorphism;
 pub mod scope_vs_lifetimes;
 pub mod static_visisbility;

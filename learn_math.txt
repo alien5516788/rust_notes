@@ -1,0 +1,8 @@
+Task list
+
+learn , 
+ type theory,
+ category theory
+ abstract algebra (group, ring, field)
+ topology
+ math spaces

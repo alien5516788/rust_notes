@@ -56,6 +56,32 @@ fn variables() {
     let _var = 33;
 }
 
+fn type_aliases() {
+    /*
+        - Type aliases define an aliase for type
+        - Syntax: type AliasName = TypeName;
+    */
+
+    // Example 1
+    type Int32 = i32;
+    let num: Int32 = 78;
+
+    // Example 2
+    type Data = Option<Box<String>>;
+    let d: Data = Some(Box::from("hello".to_string()));
+
+    // Example 2
+    struct Person<'a> {
+        name: &'a str,
+        age: i32,
+    }
+    type PersonData = Option<Box<Person<'static>>>;
+    let d = Some(Box::from(Person {
+        name: "John",
+        age: 34,
+    }));
+}
+
 fn statements_and_expressions() {
     /*
         - Expressions evaluate to a value and can be used in statements

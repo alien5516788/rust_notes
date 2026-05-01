@@ -4,7 +4,7 @@
     - Functions cannot be overloaded
         - It would lead to ambiguity and confusion
         - Overloading is usually done through traits and generics
-    - Functions are actually a kind of type apart from structs
+    - Functions are a callable type
         - Every function has a concrete type like `fn(i32) -> i32`
         - They aren’t structs, but they are first-class types
     - Functions can implement custom traits just like structs but under certain conditions
@@ -71,6 +71,7 @@ fn functions() {
 fn function_pointers() {
     /*
         - Functions can be used as objects via pointers
+        - Concreate type for a 
         - Actual function code is never duplicated or owned
     */
 

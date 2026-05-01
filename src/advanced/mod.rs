@@ -1,3 +1,5 @@
+pub mod n10_variance;
+pub mod n11_pinning;
 pub mod n1_generics;
 pub mod n2_default_type_for_generics;
 pub mod n3_generic_implementations;
@@ -9,3 +11,4 @@ pub mod n8_macros;
 pub mod n9_phantom_data;
 pub mod nightly;
 pub mod traits_extra;
+pub mod unsafe_rust;

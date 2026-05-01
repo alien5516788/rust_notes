@@ -2,11 +2,17 @@
 
 fn closures() {
     /*
-        - Closure are anonymous functions that can capture variables from their surrounding environment
-        - Closures are actually structs that implement the `Fn`, `FnMut`, or `FnOnce` traits
+        - Closures are functions that can capture variables from their surrounding environment
+        - Closures can be bind to variables instead of having a fixed function identifier (anonymous)
         - Syntax: `|Type| -> ReturnType`
     */
+    
+    // Example 1
     let function_1 = || {};
+    
+    // same as
+    fn function_1() {}
+    
     let _function_2 = || -> () {};
     let _function_3 = || -> () { () };
 
@@ -36,6 +42,8 @@ fn closures() {
 fn closure_capture() {
     /*
         - Closures can capture variables from their surrounding environment
+        - Closure that capture varibles cannot directly fn() concrete type,
+          Instead the type is defined as a trait objects or thorugh static dispatch that implements FnMut, FnOnce
         - Only variables that are used within the closure are captured
         - Closures automatically decide how to capture variables
             - &T       (immutable borrow)

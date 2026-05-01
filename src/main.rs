@@ -1,23 +1,27 @@
-#![allow(warnings, dead_code)]
 
-use std::marker::PhantomData;
-
-pub mod advanced;
-pub mod basics;
-pub mod flow_control;
-pub mod miscellaneous;
 
 fn main() {
-    // Simple idea is compiler strips any field with `PhantomData` at compile time (after any verification is done)
-    // 
-    struct Meter (i32);
-    struct Foot (i32);
-    
-    struct Person<U> {
-        height: U,
+
+    static mut VALUE: &'static i32 = &89;
+
+
+    let x = 78;
+
+    let y: &i32 = &56;
+
+    // unsafe {
+    //     {
+    //         static V: i32 = 42;
+    //         VALUE = &V;
+    //     }
+    // }
+
+    fn test(v: &'static i32) {
+        println!("{:?}", v);
     }
 
-    let p = Person::<Meter> {
-        height: Meter(170),
-    };
+    unsafe {
+        test(y);
+    }
+
 }
