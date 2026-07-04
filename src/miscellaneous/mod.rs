@@ -12,3 +12,4 @@ pub mod str_vs_string_usage;
 pub mod structs_vs_enums;
 pub mod thin_vs_fat_pointers;
 pub mod type_coercion;
+pub mod generics_vs_associated_types;

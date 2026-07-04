@@ -10,5 +10,4 @@ pub mod n7_async_await;
 pub mod n8_macros;
 pub mod n9_phantom_data;
 pub mod nightly;
-pub mod traits_extra;
 pub mod unsafe_rust;
