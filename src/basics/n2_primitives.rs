@@ -1,9 +1,14 @@
 fn unit_type() {
     /*
-        - A type similar to void
+        - Same as tuple with no values
+        - Used as void
         - Only the value can be assign to is also `()`
     */
     let _v: () = ();
+
+    // Note:
+    // Tuple with multiple values
+    let _v: (i32, f32) = (1, 3.4);
 }
 
 fn never_type() {
